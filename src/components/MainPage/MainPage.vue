@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Landing />
   <main>
     <div>
       <p>Hello</p>
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import Header from '../Header.vue';
+import Landing from './Landing.vue';
 import Footer from '../Footer.vue';
 
 export default {
   name: 'MainPage',
   components: {
-    Header,
+    Landing,
     Footer,
   },
 };

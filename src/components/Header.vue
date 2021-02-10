@@ -26,18 +26,18 @@
 
 <script>
 export default {
-  name: '',
+  name: 'Header',
 };
 </script>
 
 <style lang="scss" scoped>
 @import '../styles/colors.scss';
+
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: rgb(167, 167, 167);
   }
   .logo {
     &-wrapper {

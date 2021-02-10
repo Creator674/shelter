@@ -15,5 +15,4 @@ export default {
 
 <style lang="scss">
 @import './styles/reset.scss';
-@import './styles/body.scss';
 </style>
