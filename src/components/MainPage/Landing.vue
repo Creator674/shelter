@@ -14,7 +14,6 @@
       <img
         src="../../assets/landing-puppy.png"
         alt="puppy"
-        class="landing-content__puppey"
       />
     </div>
   </section>

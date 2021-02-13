@@ -15,4 +15,5 @@ export default {
 
 <style lang="scss">
 @import './styles/reset.scss';
+@import './styles/slider.scss';
 </style>

@@ -1,0 +1,19 @@
+@import './colors.scss';
+
+.pets-slider {
+  &__arrow svg {
+    fill: $color-primary;
+    stroke: $color-dark-3xl;
+    border: 2px solid $color-primary;
+    border-radius: 10px;
+  }
+  &__arrow:hover svg {
+    fill: $color-dark-s;
+  }
+  &__next {
+    right: -3.5em;
+  }
+  &__prev {
+    left: -3.5em;
+  }
+}
