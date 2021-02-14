@@ -5,207 +5,13 @@
       are looking for a house
     </h3>
     <splide class="pets-slider" :options="options">
-
-      <splide-slide class="pets-slide">
+      <splide-slide class="pets-slide" v-for="pet in pets" :key="pet.id">
         <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-kira.png" class="pets-slide__img"/>
+          <img :src="pet.image" class="pets-slide__img" :alt="pet.name"/>
         </div>
-        <p class="pets-slide__name">Kira</p>
-        <ButtonLearn class="pets-slide__btn" />
+        <p class="pets-slide__name"> {{ pet.name }}</p>
+        <ButtonLearn class="pets-slide__btn" :data-id="pet.id"/>
       </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-cat-zoe.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Zoe</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-schlat.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Schlat</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-cat-cleo.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Cleo</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-mone.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Mone</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-shepard.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Shepard</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-scoopy.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Scoopy</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-bella.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Bella</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-luna.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Luna</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-mambo-jambo.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Mambo & Jambo</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-ferret-shrink.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Shrink</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-rat-kamycho.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Kamycho</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-timote.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Timote</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-cat-stormy.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Stormy</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-cat-kacey.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Kacey</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-cat-will.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Will</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-teddy.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Teddy</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-coco.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Coco</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-beaver-butango.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Butango</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-hedgehog-aquila.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Aquila</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-woody.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Woody</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-panda-tonaku.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Tonaku</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-dog-oscar.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Oscar</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-squirrel-jamya.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Jamya</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
-      <splide-slide class="pets-slide">
-        <div class="pets-slide-wrapper">
-          <img src="../../assets/pet-bear-grizz.png" class="pets-slide__img"/>
-        </div>
-        <p class="pets-slide__name">Grizz</p>
-        <ButtonLearn class="pets-slide__btn" />
-      </splide-slide>
-
     </splide>
     <ButtonPrimary text="Get to know the rest" class="pets__btn" />
   </section>
@@ -213,6 +19,7 @@
 
 <script>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import pets from '../../data/pets';
 import ButtonPrimary from '../ButtonPrimary.vue';
 import ButtonLearn from '../ButtonLearn.vue';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
@@ -241,6 +48,7 @@ export default {
           next: 'splide__arrow--next pets-slider__next',
         },
       },
+      pets,
     };
   },
 };
@@ -250,7 +58,7 @@ export default {
 @import "../../styles/colors.scss";
 
 .pets {
-  background-color: $color-light-white;
+  background-color: $color-light-s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,7 +73,8 @@ export default {
     flex-direction: column;
     align-items: center;
     max-width: 270px;
-    background-color: $color-light-s;
+    background-color: $color-light-white;
+    border-radius: 20px;
     &__name {
       margin-top: 30px;
       font-family: Georgia, "Times New Roman", Times, serif;
