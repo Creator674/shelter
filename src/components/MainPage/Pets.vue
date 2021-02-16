@@ -73,7 +73,7 @@ export default {
     flex-direction: column;
     align-items: center;
     max-width: 270px;
-    background-color: $color-light-white;
+    background-color: $color-light-xl;
     border-radius: 20px;
     &__name {
       margin-top: 30px;

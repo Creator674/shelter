@@ -48,7 +48,7 @@ export default {
       max-width: 310px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-weight: 400;
-      color: $color-light-white;
+      color: $color-light-xl;
       font-size: 44px;
       line-height: 57px;
     }

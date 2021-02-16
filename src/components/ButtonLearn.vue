@@ -25,7 +25,7 @@ export default {
       line-height: 22px;
       letter-spacing: 0.06em;
       font-size: 17px;
-      background-color: $color-light-white;
+      background-color: $color-light-xl;
     }
   }
 </style>

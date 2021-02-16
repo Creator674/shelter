@@ -1,22 +1,21 @@
 <template>
   <Landing />
-  <About />
-  <Pets />
-  <Help />
   <main>
-    <div>
-      <p>Hello</p>
-    </div>
+    <About />
+    <Pets />
+    <Help />
+    <Donation />
   </main>
   <Footer />
 </template>
 
 <script>
 import Landing from './Landing.vue';
-import Footer from '../Footer.vue';
+import Footer from '../Footer/Footer.vue';
 import About from './About.vue';
 import Pets from './Pets.vue';
 import Help from './Help.vue';
+import Donation from './Donation.vue';
 
 export default {
   name: 'MainPage',
@@ -26,6 +25,7 @@ export default {
     About,
     Pets,
     Help,
+    Donation,
   },
 };
 </script>

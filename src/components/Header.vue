@@ -56,7 +56,7 @@ export default {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
       line-height: 15px;
-      color: $color-light-white;
+      color: $color-light-xl;
     }
   }
   .nav {
@@ -87,7 +87,7 @@ export default {
         transform-origin:0 50%;
       }
       &__link:hover {
-        color: $color-light-white;
+        color: $color-light-xl;
       }
     }
   }
