@@ -11,7 +11,7 @@
           <a href="#" class="nav-list__link">About the shelter</a>
         </li>
         <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Our pets</a>
+          <router-link :to="{ name: 'Pets' }" class="nav-list__link">Our pets</router-link>
         </li>
         <li class="nav-list__item">
           <a href="#" class="nav-list__link">Help the shelter</a>

@@ -1,6 +1,5 @@
-import { createWebHistory, createRouter } from 'vue-router';
-import Home from '@/components/MainPage/MainPage.vue';
-import Pets from '@/components/PetsPage/PetsPage.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../views/Home.vue';
 
 const routes = [
   {
@@ -10,13 +9,18 @@ const routes = [
   },
   {
     path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue'),
+  },
+  {
+    path: '/pets',
     name: 'Pets',
-    component: Pets,
+    component: () => import('../views/PetsPage.vue'),
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
