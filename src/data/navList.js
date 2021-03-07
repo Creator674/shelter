@@ -12,8 +12,8 @@ const navListItems = [
     text: 'Help the shelter',
   },
   {
-    name: 'Pets',
-    text: 'Contacts',
+    name: 'TrueLove',
+    text: 'True Love',
   },
 ];
 

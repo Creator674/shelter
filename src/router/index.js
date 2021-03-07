@@ -17,6 +17,11 @@ const routes = [
     name: 'Pets',
     component: () => import('../views/PetsPage.vue'),
   },
+  {
+    path: '/love',
+    name: 'TrueLove',
+    component: () => import('../views/TrueLove.vue'),
+  },
 ];
 
 const router = createRouter({
