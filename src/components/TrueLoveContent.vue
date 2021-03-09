@@ -1,17 +1,26 @@
 <template>
   <section class="true-love-content">
     <h3 class="true-love__heading">
-      Shelter pets are a little bit of a lot of things, but they’re all pure love.
+      Shelter pets are a little bit of a lot of things, but they’re all pure
+      love.
     </h3>
 
+    <SlidingText :words="['Love', 'Save', 'Rescue', 'Adopt']" />
+
     <div class="stroies-wrapper">
-      <div class="story" v-for="(story, i) in stories" :key="i">
+      <div
+        class="story"
+        v-for="(story, i) in stories"
+        :key="i"
+        :class="{ 'background--color--gray': i % 2 == 1 }"
+      >
         <div class="story-content">
           <h4 class="story-content__title">{{ story.title }}</h4>
           <p class="story-content__text">{{ story.text }}</p>
         </div>
         <div class="story-video-wrapper">
-          <iframe class="story-video"
+          <iframe
+            class="story-video"
             :src="story.video"
             frameborder="0"
             allow="accelerometer;
@@ -26,8 +35,10 @@
 
 <script>
 import stories from '../data/love';
+import SlidingText from './SlidingText.vue';
 
 export default {
+  components: { SlidingText },
   data() {
     return {
       stories,
@@ -37,31 +48,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/colors.scss';
+@import "../styles/colors.scss";
 
 .true-love {
   &__heading {
-      margin: 80px auto 60px;
-      max-width: 60vw;
-      font-family: Georgia, "Times New Roman", Times, serif;
-      font-weight: 400;
-      font-size: 35px;
-      line-height: 45px;
-      color: #545454;
-      letter-spacing: 0.06em;
-      text-align: center;
+    margin: 80px auto 60px;
+    max-width: 60vw;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    color: #545454;
+    letter-spacing: 0.06em;
+    text-align: center;
   }
   &-content {
     background-color: $color-light-xl;
   }
 }
-
 .story {
-  margin: 100px auto;
+  padding: 60px 0;
   display: flex;
-  max-width: 80vw;
+  justify-content: center;
   background-color: $color-light-xl;
-  border-radius: 20px;
   &-content {
     width: 35vw;
     margin-right: 80px;
@@ -69,7 +78,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     &__title {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: Georgia, "Times New Roman", Times, serif;
       font-weight: 400;
       color: $color-dark-xl;
       font-size: 25px;
@@ -93,5 +102,8 @@ export default {
       height: fit-content;
     }
   }
+}
+.background--color--gray {
+  background-color: $color-light-l;
 }
 </style>
