@@ -2,12 +2,13 @@
   <header :class="{ 'header--mode--light': lightMode }">
     <div class="logo-wrapper"
     :class="{ 'logo-wrapper--mode--light': lightMode }">
-      <h2
+      <!-- <h2
         class="logo__title"
         :class="{ 'logo__title--mode--light': lightMode }"
       >
         Cozy House
-      </h2>
+      </h2> -->
+      <JumpingText :word="'Cozy house'"/>
       <p
         class="logo__subtitle"
         :class="{ 'logo__subtitle--mode--light': lightMode }"
@@ -38,10 +39,14 @@
 
 <script>
 import navListItems from '../data/navList';
+import JumpingText from './JumpingText.vue';
 
 export default {
   props: {
     lightMode: Boolean,
+  },
+  components: {
+    JumpingText,
   },
   name: 'Header',
   data() {
