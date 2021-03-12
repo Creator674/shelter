@@ -8,7 +8,7 @@ const navListItems = [
     text: 'Our pets',
   },
   {
-    name: 'About',
+    name: 'Help',
     text: 'Help the shelter',
   },
   {
