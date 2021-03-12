@@ -1,28 +1,13 @@
 const stories = [
   {
-    title: 'Brian & Tommy: Battle Buddies',
-    text: 'Tommy filled the void veteran Brian felt when he retired from the Navy. Brian and Tommy’s story is a standing salute to the love of shelter pets everywhere.',
-    video: 'https://www.youtube.com/embed/mmw29XDY4fU',
-  },
-  {
     title: 'Olivia Munn’s Shelter Pet Love Story',
     text: 'Actress Olivia Munn opens up about how adopting her two dogs, Chance and Frankie, sparked her passion for shelter pet adoption.',
     video: 'https://www.youtube.com/embed/lNfbA33ZjBg',
   },
   {
-    title: 'Bonus: Olivia Munn Adoption Interview',
-    text: 'Check out Olivia’s interview about her shelter pet adoption journey.',
-    video: 'https://www.youtube.com/embed/lshtwG_YCy4',
-  },
-  {
     title: 'Logan Ryan’s Shelter Dog Team',
     text: 'Tennessee Titans cornerback Logan Ryan is his shelter dogs’ biggest fan. Learn about Logan’s adopted dogs, Leo and Julius.',
     video: 'https://www.youtube.com/embed/eFGudecZ0qA',
-  },
-  {
-    title: 'Bonus: Logan Ryan’s Pet Adoption Interview',
-    text: 'Logan sits down for a one-on-one chat about life with Leo and Julius.',
-    video: 'https://www.youtube.com/embed/IAzeQMi9bKE',
   },
   {
     title: 'Rachel Bloom’s Adopted Partner in Crime',
