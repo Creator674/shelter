@@ -1,8 +1,10 @@
 <template>
   <header :class="{ 'header--mode--light': lightMode }">
-    <div class="logo-wrapper"
-    :class="{ 'logo-wrapper--mode--light': lightMode }">
-      <JumpingText :word="'Cozy house'"/>
+    <div
+      class="logo-wrapper"
+      :class="{ 'logo-wrapper--mode--light': lightMode }"
+    >
+      <JumpingText :word="'Cozy house'" />
       <p
         class="logo__subtitle"
         :class="{ 'logo__subtitle--mode--light': lightMode }"
@@ -23,8 +25,9 @@
             :to="{ name: item.name }"
             class="nav-list__link"
             :class="{ 'nav-list__link--mode--light': lightMode }"
-            >{{item.text}}</router-link
           >
+            {{ item.text }}
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -59,6 +62,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-height: 100px;
 }
 .logo {
   &-wrapper {
@@ -125,7 +129,6 @@ header {
   }
 }
 .header--mode--light {
-  min-height: 100px;
   background-color: $color-light-xl;
 }
 .nav-list__link--mode--light:hover {
