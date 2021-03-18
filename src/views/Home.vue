@@ -1,12 +1,14 @@
 <template>
-  <Landing />
-  <main>
-    <About />
-    <Pets />
-    <Help />
-    <Donation />
-  </main>
-  <Footer />
+  <div class="home-view">
+    <Landing />
+    <main>
+      <About />
+      <Pets />
+      <Help />
+      <Donation />
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script>

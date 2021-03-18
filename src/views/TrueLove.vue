@@ -1,5 +1,5 @@
 <template>
-  <div class="love-wrapper">
+  <div class="love-view">
     <Header :lightMode="true" />
     <TrueLoveContent />
     <Footer />

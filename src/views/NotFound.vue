@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="notfound-view">
     <h2>Sometihng wrong i can feel it</h2>
   </div>
 </template>
