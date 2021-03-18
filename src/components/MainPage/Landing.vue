@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../styles/colors.scss';
 .landing {
-  padding: 40px 60px 0;
+  padding: 15px 60px 0;
   background-image: url('~@/assets/landing-bg.jpg');
   background-size: 100%;
   &-content {
