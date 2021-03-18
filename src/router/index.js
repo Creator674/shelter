@@ -22,6 +22,10 @@ const routes = [
     name: 'TrueLove',
     component: () => import('../views/TrueLove.vue'),
   },
+  {
+    path: '/:catchAll(.*)',
+    component: () => import('../views/NotFound.vue'),
+  },
 ];
 
 const router = createRouter({
