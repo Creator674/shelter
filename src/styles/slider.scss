@@ -1,19 +1,33 @@
 @import './colors.scss';
 
-.pets-slider {
-  &__arrow svg {
-    fill: $color-primary;
-    stroke: $color-dark-3xl;
-    border: 2px solid $color-primary;
-    border-radius: 10px;
-  }
-  &__arrow:hover svg {
-    fill: $color-dark-s;
-  }
-  &__next {
-    right: -3.5em;
-  }
-  &__prev {
-    left: -3.5em;
-  }
+.carousel__prev, .carousel__next {
+  background-color: $color-primary;
+}
+
+.carousel__prev, .carousel__next, .carousel__icon  {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.carousel__next  {
+  right: -15px;
+}
+
+.carousel__prev  {
+  left: -15px;
+}
+
+.carousel__pagination {
+  margin-top: 20px;
+}
+
+.carousel__pagination-button {
+  background-color: $color-dark-s;
+  border-radius: 10px;
+  height: 10px;
+  width: 26px;
+}
+
+.carousel__pagination-button--active {
+  background-color: $color-primary;
 }
