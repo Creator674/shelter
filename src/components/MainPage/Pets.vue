@@ -4,58 +4,57 @@
       Our friends who<br />
       are looking for a house
     </h3>
-    <splide class="pets-slider" :options="options">
-      <splide-slide class="pets-slide" v-for="pet in pets" :key="pet.id">
+
+    <carousel :items-to-show="3" class="pets-slider" :wrapAround="true" :transition="500">
+      <slide class="pets-slide" v-for="pet in pets" :key="pet.id">
         <div class="pets-slide-wrapper">
           <img :src="pet.image" class="pets-slide__img" :alt="pet.name"/>
         </div>
         <p class="pets-slide__name"> {{ pet.name }}</p>
         <ButtonLearn class="pets-slide__btn" :data-id="pet.id"/>
-      </splide-slide>
-    </splide>
+      </slide>
+
+      <template #addons>
+        <navigation />
+        <pagination />
+      </template>
+    </carousel>
+
     <ButtonPrimary text="Get to know the rest" class="pets__btn" />
   </section>
 </template>
 
 <script>
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import 'vue3-carousel/dist/carousel.css';
+import {
+  Carousel, Slide, Pagination, Navigation,
+} from 'vue3-carousel';
+
 import pets from '../../data/pets';
 import ButtonPrimary from '../ButtonPrimary.vue';
 import ButtonLearn from '../ButtonLearn.vue';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 export default {
   components: {
-    Splide,
-    SplideSlide,
     ButtonPrimary,
     ButtonLearn,
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
   name: 'Pets',
   data() {
     return {
-      options: {
-        width: 890,
-        speed: 500,
-        gap: 45,
-        perPage: 3,
-        perMove: 2,
-        pagination: false,
-        classes: {
-          arrow: 'splide__arrow pets-slider__arrow',
-          prev: 'splide__arrow--prev pets-slider__prev',
-          next: 'splide__arrow--next pets-slider__next',
-        },
-      },
       pets,
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../styles/colors.scss";
+@import "../../styles/slider.scss";
 
 .pets {
   background-color: $color-light-s;
@@ -64,17 +63,19 @@ export default {
   align-items: center;
   justify-content: center;
   &-slider {
-    display: flex;
+    width: 930px;
     justify-content: space-evenly;
     margin-top: 60px;
   }
   &-slide {
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 270px;
     background-color: $color-light-xl;
     border-radius: 20px;
+    user-select: none;
     &__name {
       margin-top: 30px;
       font-family: Georgia, "Times New Roman", Times, serif;
@@ -91,12 +92,10 @@ export default {
       align-items: center;
       justify-content: center;
     }
-    &__btn {
-      margin: 30px auto;
-    }
     &__img {
       max-width: 270px;
       max-height: 270px;
+      pointer-events: none;
     }
   }
   &__heading {
