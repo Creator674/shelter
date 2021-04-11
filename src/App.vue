@@ -1,9 +1,12 @@
 <template>
-  <router-view v-slot="{ Component }">
-    <transition name="scale" mode="out-in">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <div>
+    <h1 v-if="$root.loading">Creepe</h1>
+    <router-view v-else v-slot="{ Component }">
+      <transition name="scale" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <style lang="scss">
