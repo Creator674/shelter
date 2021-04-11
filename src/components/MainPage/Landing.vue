@@ -9,7 +9,7 @@
           wide and open heart. He or she will love you more than anybody else in
           the world, you will see!
         </p>
-        <ButtonPrimary text="Make a friend" class="landing-content__btn"/>
+        <ButtonPrimary text="Make a friend" :isAnimated="true" class="landing-content__btn"/>
       </div>
       <img
         src="../../assets/landing-puppy.png"

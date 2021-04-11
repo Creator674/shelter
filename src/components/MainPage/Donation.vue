@@ -92,7 +92,7 @@ export default {
 }
 .card__number {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 23px;
   letter-spacing: 0.06rem;
   color: $color-dark-l;

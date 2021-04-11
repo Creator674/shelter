@@ -296,20 +296,21 @@ $contentFadeinAT: 0.5s;
   &-info {
     &-wrapper {
       padding-top: 40px;
-      max-width: 60%;
-
+      width: 100%;
       font-family: Arial, Helvetica, sans-serif;
     }
     &__title {
-      font-size: 55px;
+      max-width: 50%;
+      font-size: 50px;
       color: $color-light-s;
       font-weight: bold;
     }
     &__text {
+      max-width: 45%;
       padding-top: 40px;
-      font-size: 35px;
+      font-size: 30px;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 45px;
+      line-height: 40px;
       color: $color-dark-s;
     }
   }
@@ -318,9 +319,9 @@ $contentFadeinAT: 0.5s;
     z-index: -1;
     position: absolute;
     right: 10px;
-    top: 10px;
-    width: 60px;
-    height: 60px;
+    top: 20px;
+    width: 40px;
+    height: 20px;
     opacity: 0;
     pointer-events: none;
     transition: all 0s $closeBtnAT + $closeBtnLineDelay;
@@ -381,7 +382,7 @@ $contentFadeinAT: 0.5s;
     height: 100%;
     min-height: 250px;
     text-align: center;
-    font-size: 100vw / $numOfItems;
+    font-size: 90vw / $numOfItems;
     line-height: 0.85;
     font-weight: bold;
     transition: transform $indexHoverAT,
@@ -499,23 +500,6 @@ $contentFadeinAT: 0.5s;
         transform: scale(1.1);
       }
     }
-  }
-}
-
-.icon-link {
-  position: absolute;
-  left: 5px;
-  bottom: 5px;
-  width: 32px;
-
-  img {
-    width: 100%;
-    vertical-align: top;
-  }
-
-  &--twitter {
-    left: auto;
-    right: 5px;
   }
 }
 </style>

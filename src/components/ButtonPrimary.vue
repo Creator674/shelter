@@ -1,5 +1,5 @@
 <template>
-  <button class="btn--primary">
+  <button class="btn--primary" :class="{'btn--jump' : isJump}">
     {{ content }}
   </button>
 </template>
@@ -8,10 +8,12 @@
 export default {
   props: {
     text: String,
+    isAnimated: Boolean,
   },
   data() {
     return {
       content: this.text,
+      isJump: this.isAnimated,
     };
   },
 };
@@ -32,6 +34,27 @@ export default {
       letter-spacing: 0.06em;
       font-size: 17px;
       background-color: $color-primary;
+      transition: background-color, color .5s;
+      &:hover {
+       cursor: pointer;
+       background-color: $color-dark-3xl;
+       color: $color-primary;
+      }
+    }
+    &--jump {
+      animation: .5s jump ease infinite alternate;
     }
   }
+
+  @keyframes jump {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    }
+    100% {
+      transform: scale(1.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    }
+  }
+
 </style>
